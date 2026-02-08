@@ -1,11 +1,21 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export function Footer() {
     return (
         <footer className="bg-slate-900 text-slate-50 py-12">
             <div className="container grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div className="md:col-span-2 space-y-4">
-                    <h2 className="font-bold text-xl tracking-tight">Naar Europa</h2>
+                    <Link href="/" className="flex items-center space-x-2 font-bold text-xl tracking-tight group inline-flex">
+                        <div className="relative w-10 h-10 flex items-center justify-center rounded-sm bg-white/10 p-1">
+                            <img 
+                                src="/logo.png" 
+                                alt="Naar Europa Logo" 
+                                className="max-w-full max-h-full object-contain transition-transform group-hover:scale-110"
+                            />
+                        </div>
+                        <span className="text-white">Naar Europa</span>
+                    </Link>
                     <p className="text-slate-300 text-sm max-w-sm">
                         Wij helpen Nederlandse organisaties hun IT, data en digitale infrastructuur onder Europees recht te brengen.
                         Onafhankelijk, juridisch nuchter en technisch gedegen.

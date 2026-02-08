@@ -12,10 +12,12 @@ export function Hero() {
                         Focus op continuïteit en soevereiniteit
                     </div>
                     <h1 className="font-heading mb-6 max-w-4xl text-4xl font-bold tracking-tight text-slate-900 md:text-5xl lg:text-6xl">
-                        Breng je IT en data <span className="text-primary">Naar Europa</span>.
+                        Breng je IT en data{" "}
+                        <br />
+                        <span className="text-primary">Naar Europa</span>.
                     </h1>
                     <p className="mb-10 max-w-2xl text-lg text-slate-600 md:text-xl">
-                        Naar Europa helpt Nederlandse organisaties migreren van Amerikaanse service providers naar Europese alternatieven. Verminder juridische risico's en herwin controle.
+                        <span className="font-semibold text-slate-900">Naar Europa</span> helpt Nederlandse organisaties migreren van Amerikaanse service providers naar Europese alternatieven. Verminder juridische risico's en behoud controle.
                     </p>
                     <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <Button asChild size="lg" className="text-base">
@@ -30,8 +32,8 @@ export function Hero() {
                 {/* Hero Graphic */}
                 <div className="relative mx-auto w-full max-w-[500px] lg:max-w-none">
                     <Image
-                        src="/hero-graphic.jpg"
-                        alt="Illustratie van een pijl die van Amerika naar Europa wijst op een wereldkaart"
+                        src="/eu-flag.png"
+                        alt="De Europese vlag wapperend aan een vlaggenmast tegen een blauwe lucht"
                         width={600}
                         height={600}
                         className="object-contain rounded-3xl shadow-2xl" // Rounded corners and shadow

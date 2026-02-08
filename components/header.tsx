@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
 
+import Image from "next/image"
+
 const navigation = [
     { name: "Home", href: "/" },
     { name: "Diensten", href: "/#diensten" }, // Anchor to section for now, later maybe a page
@@ -22,8 +24,18 @@ export function Header() {
     return (
         <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             <div className="container flex h-16 items-center justify-between">
-                <Link href="/" className="flex items-center space-x-2 font-bold text-lg tracking-tight">
-                    <span className="text-primary text-xl">Naar</span><span className="text-xl">Europa</span>
+                <Link href="/" className="flex items-center space-x-2 font-bold text-lg tracking-tight group">
+                    <div className="relative w-10 h-10 flex items-center justify-center">
+                        <img 
+                            src="/logo.png" 
+                            alt="Naar Europa Logo" 
+                            className="w-full h-full object-contain transition-transform group-hover:scale-110"
+                        />
+                    </div>
+                    <div className="flex items-center">
+                        <span className="text-primary text-xl">Naar</span>
+                        <span className="ml-1 text-xl">Europa</span>
+                    </div>
                 </Link>
                 <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
                     {navigation.map((item) => (
