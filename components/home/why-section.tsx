@@ -23,7 +23,7 @@ export function WhySection() {
         <section className="py-20 bg-white">
             <div className="container">
                 <div className="mb-16 text-center">
-                    <h2 className="mb-4 text-3xl font-bold font-heading text-slate-900 md:text-4xl">Waarom Naar Europa?</h2>
+                    <h2 className="mb-4 text-3xl font-bold font-heading text-slate-900 md:text-4xl">Waarom <span className="text-primary">Naar Europa</span>?</h2>
                     <p className="mx-auto max-w-2xl text-slate-600">
                         De afhankelijkheid van niet-Europese techreuzen vormt een groeiend risico voor continuïteit en compliance.
                     </p>
