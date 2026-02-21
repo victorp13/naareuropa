@@ -12,14 +12,32 @@ export function ContactForm() {
         event.preventDefault()
         setIsSubmitting(true)
 
-        // Simulate server delay
-        await new Promise(resolve => setTimeout(resolve, 1500))
+        try {
+            const formData = new FormData(event.currentTarget);
+            const data = Object.fromEntries(formData.entries());
 
-        // In a real app, bind to server action
-        console.log("Form submitted")
+            const endpoint = process.env.NODE_ENV === "development"
+                ? "http://localhost:7071/api/ContactFormSubmit"
+                : "/api/ContactFormSubmit";
 
-        setIsSubmitting(false)
-        setIsSuccess(true)
+            const response = await fetch(endpoint, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                setIsSuccess(true);
+            } else {
+                console.error("Failed to submit form");
+            }
+        } catch (error) {
+            console.error("Error submitting form", error);
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     if (isSuccess) {
