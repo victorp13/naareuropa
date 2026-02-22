@@ -2,28 +2,35 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { MigrationTimeline } from "@/components/services/migration-timeline"
 import { AlertTriangle, CheckCircle, FileText } from "lucide-react"
+import { MigrationSketch } from "@/components/illustrations/migration-sketch"
 
 export default function GoogleToProtonPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero */}
-            <section className="bg-slate-50 py-16 md:py-24 border-b border-slate-100">
+            <section className="bg-white py-16 md:py-24 border-b border-slate-100 overflow-hidden">
                 <div className="container">
-                    <div className="max-w-3xl">
-                        <h1 className="mb-6 text-4xl font-bold font-heading text-slate-900 md:text-5xl lg:text-6xl">
-                            Google Workspace naar <span className="text-primary">Proton Business</span>
-                        </h1>
-                        <p className="mb-8 text-xl text-slate-600">
-                            Stap over naar de 'gouden standaard' in privacyvriendelijke mail en opslag.
-                            Wij verzorgen een geruisloze migratie met oog voor details die vaak vergeten worden.
-                        </p>
-                        <div className="flex flex-wrap gap-4">
-                            <Button asChild size="lg">
-                                <Link href="/contact">Vraag een offerte aan</Link>
-                            </Button>
-                            <Button asChild variant="outline" size="lg">
-                                <Link href="#werkwijze">Bekijk de fases</Link>
-                            </Button>
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                        <div className="max-w-3xl">
+                            <h1 className="mb-6 text-4xl font-bold font-heading text-slate-900 md:text-5xl lg:text-6xl leading-tight">
+                                Google Workspace naar <span className="text-primary">Proton Business</span>
+                            </h1>
+                            <p className="mb-8 text-xl text-slate-600">
+                                Stap over naar de 'gouden standaard' in privacyvriendelijke mail en opslag.
+                                Wij verzorgen een geruisloze migratie met oog voor details die vaak vergeten worden.
+                            </p>
+                            <div className="flex flex-wrap gap-4">
+                                <Button asChild size="lg">
+                                    <Link href="/contact">Vraag een offerte aan</Link>
+                                </Button>
+                                <Button asChild variant="outline" size="lg">
+                                    <Link href="#werkwijze">Bekijk de fases</Link>
+                                </Button>
+                            </div>
+                        </div>
+                        <div className="hidden lg:block relative z-10">
+                            <div className="absolute inset-0 bg-slate-50 rounded-full blur-3xl opacity-50 -z-10 transform scale-110"></div>
+                            <MigrationSketch />
                         </div>
                     </div>
                 </div>
