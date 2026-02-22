@@ -12,7 +12,7 @@ export function Hero() {
                         Focus op continuïteit en soevereiniteit
                     </div>
                     <h1 className="font-heading mb-6 max-w-4xl text-4xl font-bold tracking-tight text-slate-900 md:text-5xl lg:text-6xl">
-                        Breng je IT en data{" "}
+                        Breng je mail en data{" "}
                         <br />
                         <span className="text-primary">Naar Europa</span>.
                     </h1>
