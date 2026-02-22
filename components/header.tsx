@@ -14,7 +14,6 @@ const navigation = [
     { name: "Diensten", href: "/#diensten" }, // Anchor to section for now, later maybe a page
     { name: "Aanpak", href: "/aanpak" },
     { name: "Tarieven", href: "/tarieven" },
-    { name: "Over ons", href: "/over-naareuropa" }, // Mapped to About
 ]
 
 export function Header() {
@@ -26,9 +25,9 @@ export function Header() {
             <div className="container flex h-16 items-center justify-between">
                 <Link href="/" className="flex items-center space-x-2 font-bold text-lg tracking-tight group">
                     <div className="relative w-10 h-10 flex items-center justify-center">
-                        <img 
-                            src="/logo.png" 
-                            alt="Naar Europa Logo" 
+                        <img
+                            src="/logo.png"
+                            alt="Naar Europa Logo"
                             className="w-full h-full object-contain transition-transform group-hover:scale-110"
                         />
                     </div>

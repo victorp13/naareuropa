@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Search, Settings, Database, Mail, Lock, CheckCircle, ArrowRight } from "lucide-react"
+import { ApproachIllustration } from "@/components/illustrations/approach-illustration"
 
 const phases = [
     {
@@ -153,17 +154,29 @@ export default function ApproachPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero */}
-            <section className="bg-slate-50 py-16 md:py-24 border-b border-slate-100">
-                <div className="container max-w-3xl text-center">
-                    <h1 className="mb-6 text-4xl font-bold font-heading text-slate-900 md:text-5xl">
-                        Onze Aanpak
-                    </h1>
-                    <p className="text-xl text-slate-600">
-                        Een migratie lijkt op het eerste gezicht eenvoudig: mail verhuizen, bestanden
-                        kopiëren, klaar. In de praktijk zitten de risico's juist in de onverwachte
-                        details. Daarom werken wij in vijf heldere fases, zodat u altijd weet waar u
-                        aan toe bent.
-                    </p>
+            <section className="bg-white py-16 md:py-24 border-b border-slate-100 overflow-hidden">
+                <div className="container">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="max-w-2xl">
+                            <h1 className="mb-6 text-4xl font-bold font-heading text-slate-900 md:text-5xl lg:text-6xl leading-tight">
+                                Onze <span className="text-primary">Aanpak</span>
+                            </h1>
+                            <p className="text-xl text-slate-600 leading-relaxed">
+                                Een migratie naar een privacy-vriendelijke omgeving lijkt op het eerste gezicht eenvoudig.
+                                In de praktijk zitten de risico's juist in de onverwachte details. Daarom werken wij in vijf heldere fases,
+                                zodat u altijd weet waar u aan toe bent en de continuïteit van uw werk gewaarborgd blijft.
+                            </p>
+                            <div className="mt-8 flex flex-wrap gap-4">
+                                <Button asChild size="lg">
+                                    <Link href="/contact">Vraag een adviesgesprek aan</Link>
+                                </Button>
+                            </div>
+                        </div>
+                        <div className="relative">
+                            <div className="absolute inset-0 bg-blue-50 rounded-full blur-3xl opacity-50 -z-10 transform scale-125"></div>
+                            <ApproachIllustration />
+                        </div>
+                    </div>
                 </div>
             </section>
 

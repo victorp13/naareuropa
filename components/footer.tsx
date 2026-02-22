@@ -8,9 +8,9 @@ export function Footer() {
                 <div className="md:col-span-2 space-y-4">
                     <Link href="/" className="flex items-center space-x-2 font-bold text-xl tracking-tight group inline-flex">
                         <div className="relative w-10 h-10 flex items-center justify-center rounded-sm bg-white/10 p-1">
-                            <img 
-                                src="/logo.png" 
-                                alt="Naar Europa Logo" 
+                            <img
+                                src="/logo.png"
+                                alt="Naar Europa Logo"
                                 className="max-w-full max-h-full object-contain transition-transform group-hover:scale-110"
                             />
                         </div>
@@ -38,7 +38,6 @@ export function Footer() {
                 <div>
                     <h3 className="font-semibold text-white mb-4">Bedrijf</h3>
                     <ul className="space-y-2 text-sm text-slate-300">
-                        <li><Link href="/over-naareuropa" className="hover:text-white transition-colors">Over ons</Link></li>
                         <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
                         <li><Link href="/juridisch/privacy" className="hover:text-white transition-colors">Privacyverklaring</Link></li>
                         <li><Link href="/juridisch/algemene-voorwaarden" className="hover:text-white transition-colors">Algemene Voorwaarden</Link></li>
