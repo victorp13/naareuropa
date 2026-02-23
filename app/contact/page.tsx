@@ -27,7 +27,7 @@ export default function ContactPage() {
                                     </li>
                                     <li className="flex items-center text-slate-600">
                                         <Phone className="h-5 w-5 text-blue-600 mr-3" />
-                                        <span>+31 (0)20 123 4567</span>
+                                        <span>+31 (0)6 2789 4231</span>
                                     </li>
                                     <li className="flex items-start text-slate-600">
                                         <MapPin className="h-5 w-5 text-blue-600 mr-3 mt-0.5" />
