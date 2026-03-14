@@ -33,9 +33,11 @@ export default function PrivacyPage() {
                         Wij proberen deze gegevens zo veel mogelijk te anonimiseren. Deze gegevens worden niet aan derden verstrekt.
                     </p>
 
-                    <h2>Google Analytics / Tracking</h2>
+                    <h2>Google Ads conversiemeting</h2>
                     <p>
-                        Wij maken <strong>geen</strong> gebruik van Google Analytics of andere Amerikaanse tracking partijen.
+                        Wij maken geen gebruik van Google Analytics. Voor onze advertentiecampagnes gebruiken wij Google Ads conversiemeting.
+                        Deze meting wordt alleen ingeschakeld nadat u hiervoor toestemming heeft gegeven via de cookiebanner.
+                        Zonder toestemming blijven advertentiecookies uitgeschakeld.
                     </p>
 
                     <h2>Inzage, correctie en recht van verzet</h2>

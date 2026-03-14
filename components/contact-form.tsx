@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { CheckCircle2, Loader2 } from "lucide-react"
+import { trackContactFormConversion } from "@/lib/google-ads"
 
 export function ContactForm() {
     const [isSubmitting, setIsSubmitting] = useState(false)
@@ -29,6 +30,7 @@ export function ContactForm() {
             });
 
             if (response.ok) {
+                trackContactFormConversion();
                 setIsSuccess(true);
             } else {
                 console.error("Failed to submit form");

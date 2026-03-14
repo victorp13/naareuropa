@@ -3,6 +3,8 @@ import { Inter, Outfit } from "next/font/google";
 import Script from "next/script";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { CookieConsentBanner } from "@/components/cookie-consent-banner";
+import { GOOGLE_ADS_ID } from "@/lib/google-ads";
 import "./globals.css";
 
 const inter = Inter({
@@ -28,16 +30,27 @@ export default function RootLayout({
   return (
     <html lang="nl">
       <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-978063814"
-          strategy="afterInteractive"
-        />
-        <Script id="google-ads-gtag" strategy="afterInteractive">
+        <Script id="google-consent-default" strategy="beforeInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              analytics_storage: 'denied',
+              wait_for_update: 500
+            });
+          `}
+        </Script>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-init" strategy="afterInteractive">
+          {`
             gtag('js', new Date());
-            gtag('config', 'AW-978063814');
+            gtag('config', '${GOOGLE_ADS_ID}');
           `}
         </Script>
       </head>
@@ -49,6 +62,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <CookieConsentBanner />
       </body>
     </html>
   );
