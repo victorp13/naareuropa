@@ -34,8 +34,7 @@ export function CookieConsentBanner() {
     <div className="fixed inset-x-0 bottom-0 z-50 border-t border-slate-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-5xl flex-col gap-4 px-4 py-4 sm:px-6 md:flex-row md:items-center md:justify-between">
         <p className="text-sm text-slate-700">
-          Wij gebruiken alleen advertentiecookies na uw toestemming om Google Ads-conversies
-          te meten.
+          Wij gebruiken alleen advertentiecookies na uw toestemming om conversies te meten.
         </p>
         <div className="flex flex-wrap gap-2">
           <button
