@@ -13,11 +13,11 @@ export default function GoogleToProtonPage() {
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="max-w-3xl">
                             <h1 className="mb-6 text-4xl font-bold font-heading text-slate-900 md:text-5xl lg:text-6xl leading-tight">
-                                Google Workspace naar <span className="text-primary">Proton Business</span>
+                                Google Workspace naar Proton migratie
                             </h1>
                             <p className="mb-8 text-xl text-slate-600">
-                                Stap over naar de 'gouden standaard' in privacyvriendelijke mail en opslag.
-                                Wij verzorgen een geruisloze migratie met oog voor details die vaak vergeten worden.
+                                Met onze Google Workspace naar Proton migratie helpen wij Nederlandse organisaties veilig
+                                overstappen van Google Workspace naar Proton, inclusief e-mail, agenda en bestanden.
                             </p>
                             <div className="flex flex-wrap gap-4">
                                 <Button asChild size="lg">
